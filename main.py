@@ -14,11 +14,12 @@ def isExactlyThree(num):
         return False
     
     # every number (composite or prime) is divisible by itself or for 1
+    cnt = 0
     for i in range(2,num-1):
         if num % i == 0:
-            return True
+            cnt += 1
     
-    return False
+    return cnt == 1
     
 def freqCount(nested_list, element):
     
